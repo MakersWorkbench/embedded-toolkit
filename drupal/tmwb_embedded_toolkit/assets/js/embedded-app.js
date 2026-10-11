@@ -11,8 +11,8 @@
     tag: 'Calculators for Arduino, ESP32, and Pico projects',
     intro: 'Six free tools for microcontroller builders: ADC conversions, a divider designer that writes the code for you, PWM, a logic-level compatibility checker, UART baud rates, and AVR timer settings. Type values with prefixes like 4.7k or 16M, and the answers update as you type.',
     site: 'https://www.themakersworkbench.com',
-    repo: '',
-    wiki: '',
+    repo: 'https://github.com/MakersWorkbench/embedded-toolkit',
+    wiki: 'https://github.com/MakersWorkbench/embedded-toolkit/wiki',
     license: 'https://www.apache.org/licenses/LICENSE-2.0',
     licenseName: 'Apache License 2.0'
   };
