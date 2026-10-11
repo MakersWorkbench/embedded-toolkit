@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Mount point and description for the Embedded Systems Toolkit.
+ *
+ * The tool (assets/js/embedded-app.js) builds its own interface inside the mount
+ * element. The description below it is server-rendered so that search
+ * engines, screen readers, and visitors without JavaScript get real text.
+ *
+ * Available variables:
+ * - heading: heading level (h1 to h6) used for the tool's title.
+ * - features: array of [label, description] pairs for what the tool covers.
+ * - show_description: whether to render the description section.
+ */
+#}
+<div class="tmwb-embedded-toolkit-wrapper">
+  <div class="tmwb-emb" id="tmwb-emb" data-heading="{{ heading }}">
+    <noscript>
+      {{ 'The Embedded Systems Toolkit needs JavaScript.'|t }}
+    </noscript>
+  </div>
+  {% if show_description and features %}
+    <section class="tmwb-embedded-toolkit-about" aria-labelledby="tet-about-title">
+      <h3 id="tet-about-title">{{ 'What the Embedded Systems Toolkit covers'|t }}</h3>
+      <p>{{ 'The Embedded Systems Toolkit is a free set of tools for Arduino, ESP32, and Raspberry Pi Pico builders. Pick a tab, type your values with prefixes like 4.7k or 16M, and the answer updates as you type, with the formula shown.'|t }}</p>
+      <ul>
+        {% for feature in features %}
+          <li><strong>{{ feature[0] }}</strong>: {{ feature[1] }}</li>
+        {% endfor %}
+      </ul>
+      <p>{{ 'The formulas are standard datasheet and textbook ones, and the logic-level figures are typical values. Parts differ between manufacturers, so confirm anything critical in the datasheet for your exact chip.'|t }}</p>
+    </section>
+  {% endif %}
+</div>

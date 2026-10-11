@@ -1,0 +1,10 @@
+filter_settings.tmwb_embedded_toolkit_embed:
+  type: mapping
+  label: 'TMWB Embedded Toolkit Embed'
+  mapping:
+    show_description:
+      type: boolean
+      label: 'Show the description under the tool'
+    structured_data:
+      type: boolean
+      label: 'Add WebApplication structured data (JSON-LD) to the page head'

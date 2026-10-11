@@ -1,0 +1,15 @@
+toolkit:
+  version: 1.0.0
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+    gpl-compatible: false
+  css:
+    component:
+      assets/emb.css: {}
+      css/tmwb-embedded-toolkit.css: {}
+  js:
+    # embedded-logic.js defines the TMWBEmb global that embedded-app.js reads.
+    assets/js/embedded-logic.js: {}
+    # embedded-app.js mounts onto #tmwb-emb, so it must run after the markup exists.
+    assets/js/embedded-app.js: { attributes: { defer: true } }

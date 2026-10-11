@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * TMWB Embedded Toolkit module.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * Registers the Twig template that renders the tool's mount point and its
+ * server-rendered description.
+ */
+function tmwb_embedded_toolkit_theme($existing, $type, $theme, $path) {
+  return [
+    'tmwb_embedded_toolkit' => [
+      'variables' => [
+        'heading' => 'h2',
+        'features' => [],
+        'show_description' => TRUE,
+      ],
+      'template' => 'tmwb-embedded-toolkit',
+    ],
+  ];
+}

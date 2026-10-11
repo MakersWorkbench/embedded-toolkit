@@ -1,0 +1,87 @@
+/**
+ * @file
+ * Site integration styles for the Embedded Systems Toolkit.
+ *
+ * The tool's own styles live in assets/emb.css and are scoped under
+ * .tmwb-emb (sized in px, so a theme that changes the root font size does
+ * not resize it). This file only adjusts how the tool sits inside a page and
+ * keeps a theme's global form styles from restyling the tool's controls.
+ */
+
+.tmwb-embedded-toolkit-wrapper {
+  width: 100%;
+  margin: 24px auto 0;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb {
+  max-width: 860px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Themes often style bare form controls (white background, their own height
+   and border). Reset them inside the tool, with enough specificity to win. */
+.tmwb-embedded-toolkit-wrapper .tmwb-emb .fbox select,
+.tmwb-embedded-toolkit-wrapper .tmwb-emb .fbox input[type="text"],
+.tmwb-embedded-toolkit-wrapper .tmwb-emb .fbox input {
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 8px;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15.2px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb .fbox input[type="text"] {
+  font-size: 18.4px;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb .fbox select {
+  appearance: auto;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb select option {
+  background-color: #2f343c;
+  color: #e8ecf2;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb button {
+  letter-spacing: normal;
+  text-transform: none;
+  box-shadow: none;
+}
+
+.tmwb-embedded-toolkit-wrapper .tmwb-emb ol,
+.tmwb-embedded-toolkit-wrapper .tmwb-emb ul {
+  margin-block: 8px;
+}
+
+/* Server-rendered description under the tool (for crawlers and visitors
+   without JavaScript). Kept quiet so it reads as supporting text. */
+.tmwb-embedded-toolkit-about {
+  max-width: 860px;
+  margin: 32px auto 0;
+  font-size: 15.2px;
+  line-height: 1.6;
+}
+
+.tmwb-embedded-toolkit-about h3 {
+  margin: 0 0 8px;
+  font-size: 18.4px;
+}
+
+.tmwb-embedded-toolkit-about ul {
+  margin: 12px 0;
+  padding-left: 19.2px;
+}
+
+.tmwb-embedded-toolkit-about li {
+  margin: 4px 0;
+}
